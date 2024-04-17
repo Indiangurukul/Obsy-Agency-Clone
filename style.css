@@ -41,6 +41,19 @@ html, body{
     height: 100%;
 }
 
+#cursor{
+    position: fixed;
+    background: transparent;
+    height: 2.5vw;
+    width: 2.5vw;
+    border: 2px solid #ffffff9a;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 #loader{
     position: fixed;
     width: 100%;
@@ -131,4 +144,56 @@ html, body{
     width: 100%;
     height: 100vh;
     background-color: #151515;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3vw 5.5vw;
+}
+
+#nav-part-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+#nav-part-2 h4{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin-left: 25%;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.hero:nth-child(2){
+    margin-top: 12vh;
+}
+
+.hero h1{
+    font-size: 7.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+.hero h2, .hero h3{
+    font-size: 7.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
 }
