@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Plain";
+    src: url("./Fonts/plain-light-webfont.woff2");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Plain";
+    src: url("./Fonts/plain-regular-webfont.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "silk-serif";
+    src: url("./Fonts/silkserif-lightitalic-webfont.woff2");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "silk-serif";
+    src: url("./Fonts/silkserif-regularitalic-webfont.woff2");
+    font-weight: 400;
+}
+
+
+:root{
+    --primary-font: "Plain";
+    --secondary-font: "silk-serif";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: var(--primary-font);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 25vh 10vw;
+    background: #0b0b0b;
+    z-index: 999;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.line-part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+.line-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+
+.line-part1 h5, .line-part1 h6{
+    font-family: var(--secondary-font);
+    font-size: 4vw;
+    font-weight: 100;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.line h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    opacity: 0;
+    font-weight: 500;
+    animation: 1s infinite;
+}
+
+@keyframes text-anime{
+    0%{
+        font-family: var(--primary-font);
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: var(--primary-font);
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: var(--secondary-font);
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: var(--secondary-font);
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+#main{
+    position: relative;
+    background: #050505;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
